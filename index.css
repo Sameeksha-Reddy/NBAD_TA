@@ -1,0 +1,61 @@
+/* index.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .github-button {
+    display: inline-flex;
+    width: 80px; 
+    height: auto;
+    cursor: pointer;
+  }
+  
+  h1{
+    display: inline-flex;
+  }
+
+  .head{
+    justify-content: space-between;
+}
+  
+  .hero {
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+  }
+
+  .center {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .basket {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .basket.left {
+    background-color: #e7e7e7;
+  }
+  
+  .basket.right {
+    background-color: #b0b0b0; /* Use a different color for the right basket */
+  }
+  

@@ -1,0 +1,59 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="center">
+    <div class="head">
+      <div class="hero">
+        <h1>My Grocery List</h1>
+        <a href="https://github.com" target="_blank">
+          <img src="github_logo.png" alt="GitHub" class="github-button">
+        </a>
+      </div>
+    </div>
+    <div class="basket left" id="leftBasket">
+      <h2>List of fruits</h2>
+      <ul id="leftList">
+        <hr class="divider"> 
+      </ul>
+    </div>
+    <div class="basket right" id="rightBasket">
+      <h2>Added to cart</h2>
+      <hr class="divider"> 
+      <ul id="rightList">
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const leftList = document.getElementById('leftList');
+      const rightList = document.getElementById('rightList');
+      const fruits = ['Apple', 'Banana', 'Orange', 'Grapes', 'Strawberry', 'Watermelon'];
+      function addToRightBasket(fruit) {
+        const listItem = document.createElement('li');
+        listItem.textContent = fruit;
+        rightList.appendChild(listItem);
+      }
+
+      // Add fruits to the left basket
+      fruits.forEach(fruit => {
+        const listItem = document.createElement('li');
+        listItem.textContent = fruit;
+        listItem.addEventListener('click', function () {
+          // Clone the clicked fruit and add it to the right basket
+          addToRightBasket(fruit);
+        });
+        leftList.appendChild(listItem);
+      });
+    });
+  </script>
+</body>
+</html>
